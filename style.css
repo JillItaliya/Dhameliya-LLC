@@ -1,0 +1,31 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #004466;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+header {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.card-title {
+  color: #0072ff;
+}
+
+footer {
+  background-color: #222;
+}
