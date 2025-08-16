@@ -1,53 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery - Dhamliya LLC</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Dhamliya LLC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <header class="bg-light text-center py-5">
-    <div class="container">
-      <h1 class="fw-bold">Our Project Gallery</h1>
-      <p class="lead">Explore the transformation from plans to perfection</p>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gallery - Dhameliya LLC</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="construction, gallery, portfolio, residential, commercial">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="gallery-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Dhameliya LLC</h1><span>.</span>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
     </div>
   </header>
 
-  <section class="container py-5">
-    <div class="row g-4">
-      <div class="col-md-4"><img src="https://via.placeholder.com/400x250" class="img-fluid rounded shadow" alt="Project 1"><h5 class="text-center mt-2">164 Somerton Dr, Montgomery</h5></div>
-      <div class="col-md-4"><img src="https://via.placeholder.com/400x250" class="img-fluid rounded shadow" alt="Project 2"><h5 class="text-center mt-2">4011 Delano St, Houston</h5></div>
-      <div class="col-md-4"><img src="https://via.placeholder.com/400x250" class="img-fluid rounded shadow" alt="Project 3"><h5 class="text-center mt-2">2000 Mississippi St, Baytown</h5></div>
-      <div class="col-md-4"><img src="https://via.placeholder.com/400x250" class="img-fluid rounded shadow" alt="Project 4"><h5 class="text-center mt-2">243 Teewood Ct, Montgomery</h5></div>
-      <div class="col-md-4"><img src="https://via.placeholder.com/400x250" class="img-fluid rounded shadow" alt="Project 5"><h5 class="text-center mt-2">75 Wick Willow Rd, Montgomery</h5></div>
-      <div class="col-md-4"><img src="https://via.placeholder.com/400x250" class="img-fluid rounded shadow" alt="Project 6"><h5 class="text-center mt-2">1912 Gentry St, Houston</h5></div>
+  <main class="main">
+    <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.jpg);">
+      <div class="container position-relative">
+        <h1>Gallery</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Gallery</li>
+          </ol>
+        </nav>
+      </div>
     </div>
-  </section>
 
-  <footer class="bg-dark text-white text-center p-3">
-    &copy; 2025 Dhamliya LLC | Houston, TX | dhameliyallc@gmail.com
+    <!-- Gallery Section -->
+    <section id="gallery" class="portfolio section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Project Gallery</h2>
+          <p>Explore a showcase of our premium residential and commercial projects.</p>
+        </div>
+
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <!-- Gallery Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="https://source.unsplash.com/800x600/?home,architecture" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Luxury Home</h4>
+                <p>Residential</p>
+                <div class="portfolio-links">
+                  <a href="https://source.unsplash.com/800x600/?home,architecture" data-gallery="gallery" class="glightbox" title="Luxury Home"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="https://source.unsplash.com/800x600/?interior,room" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Interior Design</h4>
+                <p>Modern Living</p>
+                <div class="portfolio-links">
+                  <a href="https://source.unsplash.com/800x600/?interior,room" data-gallery="gallery" class="glightbox" title="Interior"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="https://source.unsplash.com/800x600/?villa,exterior" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Villa Exterior</h4>
+                <p>Premium Finish</p>
+                <div class="portfolio-links">
+                  <a href="https://source.unsplash.com/800x600/?villa,exterior" data-gallery="gallery" class="glightbox" title="Villa"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="https://source.unsplash.com/800x600/?kitchen,interior" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Modern Kitchen</h4>
+                <p>Remodel</p>
+                <div class="portfolio-links">
+                  <a href="https://source.unsplash.com/800x600/?kitchen,interior" data-gallery="gallery" class="glightbox" title="Kitchen"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="https://source.unsplash.com/800x600/?bathroom,tiles" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Elegant Bathroom</h4>
+                <p>Modern Finish</p>
+                <div class="portfolio-links">
+                  <a href="https://source.unsplash.com/800x600/?bathroom,tiles" data-gallery="gallery" class="glightbox" title="Bathroom"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="https://source.unsplash.com/800x600/?construction,site" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Construction Site</h4>
+                <p>Ongoing Project</p>
+                <div class="portfolio-links">
+                  <a href="https://source.unsplash.com/800x600/?construction,site" data-gallery="gallery" class="glightbox" title="Construction"><i class="bi bi-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center"><span class="sitename">Dhameliya LLC</span></a>
+          <div class="footer-contact pt-3">
+            <p>5022 Addicks Satsuma Rd</p>
+            <p><strong>Phone:</strong> +1 8888888888</p>
+            <p><strong>Email:</strong> Dhameliyallc@gmail.com</p>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Custom Homes</a></li>
+            <li><a href="#">Renovations</a></li>
+            <li><a href="#">Commercial Construction</a></li>
+            <li><a href="#">Consulting</a></li>
+            <li><a href="#">Design & Architecture</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Explore More</h4>
+          <ul>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="carrer.html">Career</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container text-center mt-4">
+      <p>© <strong>Dhameliya LLC</strong> All Rights Reserved</p>
+    </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scroll Top -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

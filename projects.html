@@ -1,170 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects - DhameliyaLLC</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Projects - Dhameliya LLC</title>
+  <meta name="description" content="Explore Dhameliya LLC projects across Houston, Montgomery, and Baytown — custom homes, renovations, and commercial builds.">
+  <meta name="keywords" content="Dhameliya LLC, construction, custom homes, renovations, commercial construction, Houston">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .header {
-      background: url('https://images.unsplash.com/photo-1590608897129-79da99f11c5c') center/cover no-repeat;
-      height: 50vh;
-      color: white;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .card-img-top {
-      height: 220px;
+    /* Force consistent aspect ratio to avoid isotope gaps */
+    .portfolio-content img {
+      width: 100%;
+      aspect-ratio: 4/3;
       object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover img {
-      transform: scale(1.05);
-    }
-
-    .badge {
-      font-size: 0.8rem;
-    }
-
-    .filter-btn {
-      margin: 0 5px;
-    }
-
-    footer {
-      background: #222;
-      color: #ddd;
-      padding: 20px 0;
-      text-align: center;
+      display: block;
     }
   </style>
 </head>
-<body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">DhameliyaLLC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="#">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="location.html">Location</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<body class="projects-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Dhameliya LLC</h1><span aria-hidden="true">.</span>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Header -->
-  <header class="header">
-    <div class="header-content">
-      <h1 class="display-5 fw-bold">Our Projects</h1>
-      <p>Explore our recent, residential, commercial, and ongoing works.</p>
+        <button class="mobile-nav-toggle d-xl-none" aria-label="Toggle navigation">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </nav>
     </div>
   </header>
 
-  <!-- Filters -->
-  <section class="text-center py-4 bg-light">
-    <div class="container">
-      <button class="btn btn-outline-dark filter-btn" onclick="filterProjects('all')">All</button>
-      <button class="btn btn-outline-dark filter-btn" onclick="filterProjects('residential')">Residential</button>
-      <button class="btn btn-outline-dark filter-btn" onclick="filterProjects('commercial')">Commercial</button>
-      <button class="btn btn-outline-dark filter-btn" onclick="filterProjects('ongoing')">Ongoing</button>
-    </div>
-  </section>
+  <main class="main">
 
-  <!-- Projects Grid -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4" id="projectGrid">
-
-        <!-- Project 1 -->
-        <div class="col-md-4 project-card" data-category="residential" data-aos="fade-up">
-          <div class="card shadow">
-            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" class="card-img-top" alt="Residential Home">
-            <div class="card-body">
-              <h5 class="card-title">Modern Home</h5>
-              <span class="badge bg-success">Completed</span>
-              <p class="card-text">A luxurious 3BHK in Houston with high-end finishes and patio space.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-md-4 project-card" data-category="commercial" data-aos="fade-up" data-aos-delay="100">
-          <div class="card shadow">
-            <img src="https://images.unsplash.com/photo-1581091012184-5c1c8e040ecd" class="card-img-top" alt="Commercial Building">
-            <div class="card-body">
-              <h5 class="card-title">Retail Space</h5>
-              <span class="badge bg-success">Completed</span>
-              <p class="card-text">Custom-designed commercial unit for a Houston-based clothing store.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-4 project-card" data-category="ongoing" data-aos="fade-up" data-aos-delay="200">
-          <div class="card shadow">
-            <img src="https://images.unsplash.com/photo-1613544926844-8bdb338ca2b5" class="card-img-top" alt="Ongoing Site">
-            <div class="card-body">
-              <h5 class="card-title">Kitchen Remodel</h5>
-              <span class="badge bg-warning text-dark">Ongoing</span>
-              <p class="card-text">Ongoing interior upgrade with custom cabinetry and tiling work.</p>
-            </div>
-          </div>
-        </div>
-
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.jpg);">
+      <div class="container position-relative">
+        <h1>Projects</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Projects</li>
+          </ol>
+        </nav>
       </div>
-    </div>
-  </section>
+    </div><!-- End Page Title -->
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p class="mb-0">© 2025 DhameliyaLLC • 5022 Addicks Satsuma Rd #300, Houston, TX 77084</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
+
+          <!-- Filters -->
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+          </ul><!-- End Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-1.jpg" alt="164 Somerton Dr, Montgomery TX">
+                <div class="portfolio-info">
+                  <h4>164 Somerton Dr</h4>
+                  <p>Montgomery, Texas - 77356</p>
+                  <a href="assets/img/projects/construction-1.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="164 Somerton Dr">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://www.har.com/homedetail/164-somerton-montgomery-tx-77356/13871277" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-2.jpg" alt="75 Wick Willow Rd, Montgomery TX">
+                <div class="portfolio-info">
+                  <h4>75 Wick Willow Rd</h4>
+                  <p>Montgomery, Texas - 77356</p>
+                  <a href="assets/img/projects/construction-2.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="75 Wick Willow Rd">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://www.har.com/homedetail/75-wick-willow-rd-montgomery-tx-77356/9900822" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-3.jpg" alt="243 Teewood Ct, Montgomery TX">
+                <div class="portfolio-info">
+                  <h4>243 Teewood Ct</h4>
+                  <p>Montgomery, Texas - 77356</p>
+                  <a href="assets/img/projects/construction-3.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="243 Teewood Ct">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://www.har.com/homedetail/243-teewood-ct-montgomery-tx-77356/5219947" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Project 4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-4.jpg" alt="4011 Delano St, Houston TX">
+                <div class="portfolio-info">
+                  <h4>4011 Delano St</h4>
+                  <p>Houston, Texas - 77004</p>
+                  <a href="assets/img/projects/construction-4.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="4011 Delano St">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://goo.gl/maps/example4" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Project 5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-5.jpg" alt="1912 Gentry St, Houston TX">
+                <div class="portfolio-info">
+                  <h4>1912 Gentry St</h4>
+                  <p>Houston, Texas</p>
+                  <a href="assets/img/projects/construction-5.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="1912 Gentry St">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://www.har.com/homedetail/4011-delano-st-houston-tx-77004/16745096" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Project 6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-6.jpg" alt="2000 Mississippi St, Baytown TX">
+                <div class="portfolio-info">
+                  <h4>2000 Mississippi St</h4>
+                  <p>Baytown, Texas</p>
+                  <a href="assets/img/projects/construction-6.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="2000 Mississippi St">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://www.har.com/homedetail/1912-gentry-st-houston-tx-77009/2942318" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Project 7 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-7.jpg" alt="12020 FM 1960, Suite 300 Houston TX">
+                <div class="portfolio-info">
+                  <h4>12020 FM 1960, Suite 300</h4>
+                  <p>Houston, Texas</p>
+                  <a href="assets/img/projects/construction-7.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="12020 FM 1960">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://goo.gl/maps/example7" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Project 8 -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/projects/construction-8.jpg" alt="FB Market, 14636 Almeda Rd, Houston TX">
+                <div class="portfolio-info">
+                  <h4>FB Market, 14636 Almeda Rd</h4>
+                  <p>Houston, Texas</p>
+                  <a href="assets/img/projects/construction-8.jpg" class="glightbox preview-link" data-gallery="portfolio-gallery-app" title="FB Market, Houston">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="https://goo.gl/maps/example8" class="btn btn-primary" target="_blank">More Details</a>
+                </div>
+              </div>
+            </div>
+          
+          </div><!-- End Projects Grid -->
+          
+            
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container text-center mt-4">
+      <p>© <strong>Dhameliya LLC</strong> All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    function filterProjects(category) {
-      const cards = document.querySelectorAll(".project-card");
-      cards.forEach(card => {
-        const matches = card.getAttribute("data-category") === category || category === 'all';
-        card.style.display = matches ? "block" : "none";
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Init Isotope -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var grid = document.querySelector('.isotope-container');
+      if (!grid) return;
+
+      var iso = new Isotope(grid, {
+        itemSelector: '.isotope-item',
+        layoutMode: 'fitRows'
       });
-    }
+
+      imagesLoaded(grid, function () {
+        iso.layout();
+      });
+    });
   </script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
